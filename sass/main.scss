@@ -15,6 +15,11 @@ $color-primary: #50b2bb;
 $color-secondary: #5ad869;
 $color-tertiary: #f9d648;
 
+$body-text-color: #777;
+$button-color: #fff;
+$white-button-font: #444;
+$color-black: #000;
+
 *,
 *::before,
 *::after {
@@ -32,7 +37,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $body-text-color;
   box-sizing: border-box;
 }
 
@@ -65,46 +70,106 @@ body {
   background-position: center;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
+
+  &__logo-box {
+    position: absolute;
+    top: 3.2rem;
+    left: 4.8rem;
+  }
+
+  &__logo {
+    height: 5.6rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 3.2rem;
-  left: 4.8rem;
-}
-
-.header__logo {
-  height: 5.6rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 .heading-primary {
-  color: #fff;
+  color: $button-color;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 8rem;
+
+  &--main {
+    display: block;
+    font-size: 6.4rem;
+    font-weight: 400;
+    letter-spacing: 4.8rem;
+    animation: moveInLeft 1s ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 1.6rem;
+    animation: moveInRight 1s ease-out;
+  }
 }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6.4rem;
-  font-weight: 400;
-  letter-spacing: 4.8rem;
-  animation: moveInLeft 1s ease-out;
-}
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.1rem solid $button-color;
+    border-radius: 3.5rem;
+    padding: 1.6rem 4rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 500;
-  letter-spacing: 1.6rem;
-  animation: moveInRight 1s ease-out;
+  &--animated {
+    animation: moveInBottom 0.7s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 3.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.7rem 2rem rgba($color-black, 0.3);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.2rem 1rem rgba($color-black, 0.3);
+  }
+
+  &--white:link,
+  &--white:visited {
+    background-color: $button-color;
+    color: $white-button-font;
+
+    &::after {
+      background-color: $button-color;
+      color: $white-button-font;
+    }
+  }
 }
 
 @keyframes moveInLeft {
@@ -137,63 +202,6 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 0.1rem solid #fff;
-  border-radius: 3.5rem;
-  padding: 1.6rem 4rem;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.7s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-
-.btn::after {
-  display: inline-block;
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 3.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.3);
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
-}
-
-.btn--white:link,
-.btn--white:visited {
-  background-color: #fff;
-  color: #444;
-}
-
-.btn--white::after {
-  background-color: #fff;
-  color: #444;
 }
 
 @keyframes moveInBottom {
