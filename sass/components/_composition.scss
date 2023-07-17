@@ -2,10 +2,9 @@
   position: relative;
 
   &__img {
+    --g: 1.5rem;
+    --b: 0.6rem;
     --s: 250px;
-    --b: 0.8rem;
-    --g: 1.4rem;
-    --c: #28b485;
 
     width: var(--s);
     aspect-ratio: 1;
