@@ -55,12 +55,64 @@
       color: $white-button-font;
     }
   }
+
+  &--green:link,
+  &--green:visited {
+    border: none;
+    border-radius: 6rem;
+    background-color: $color-secondary-dark;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-secondary-dark;
+      color: $color-white;
+    }
+  }
+
+  &--1:link,
+  &--1:visited {
+    border: none;
+    border-radius: 6rem;
+    background-color: $button-color-1;
+    color: $color-white;
+
+    &::after {
+      background-color: $button-color-1;
+      color: $color-white;
+    }
+  }
+
+  &--2:link,
+  &--2:visited {
+    border: none;
+    border-radius: 6rem;
+    background-color: $button-color-2;
+    color: $color-white;
+
+    &::after {
+      background-color: $button-color-2;
+      color: $color-white;
+    }
+  }
+
+  &--3:link,
+  &--3:visited {
+    border: none;
+    border-radius: 6rem;
+    background-color: $button-color-3;
+    color: $color-white;
+
+    &::after {
+      background-color: $button-color-3;
+      color: $color-white;
+    }
+  }
 }
 
 .link-button {
   display: flex;
   text-decoration: none;
-  color: inherit;
+  color: $color-secondary-dark;
   max-width: 13rem;
   position: relative;
   padding: 1rem;

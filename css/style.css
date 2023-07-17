@@ -137,6 +137,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
@@ -182,10 +188,46 @@ body {
     background-color: #fff;
     color: #444; }
 
+.btn--green:link, .btn--green:visited {
+  border: none;
+  border-radius: 6rem;
+  background-color: #28b485;
+  color: #fff; }
+  .btn--green:link::after, .btn--green:visited::after {
+    background-color: #28b485;
+    color: #fff; }
+
+.btn--1:link, .btn--1:visited {
+  border: none;
+  border-radius: 6rem;
+  background-color: #5ad869;
+  color: #fff; }
+  .btn--1:link::after, .btn--1:visited::after {
+    background-color: #5ad869;
+    color: #fff; }
+
+.btn--2:link, .btn--2:visited {
+  border: none;
+  border-radius: 6rem;
+  background-color: #ffb900;
+  color: #fff; }
+  .btn--2:link::after, .btn--2:visited::after {
+    background-color: #ffb900;
+    color: #fff; }
+
+.btn--3:link, .btn--3:visited {
+  border: none;
+  border-radius: 6rem;
+  background-color: #50b2bb;
+  color: #fff; }
+  .btn--3:link::after, .btn--3:visited::after {
+    background-color: #50b2bb;
+    color: #fff; }
+
 .link-button {
   display: flex;
   text-decoration: none;
-  color: inherit;
+  color: #28b485;
   max-width: 13rem;
   position: relative;
   padding: 1rem;
@@ -319,7 +361,9 @@ body {
     height: 23rem;
     background-blend-mode: soft-light;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; }
     .card__img--1 {
       background-image: linear-gradient(to right bottom, #5ad869, #28b485), url(../img/about-1.jpg); }
     .card__img--2 {
@@ -358,6 +402,23 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .header {
   height: 110vh;
@@ -435,5 +496,5 @@ body {
     transform: skewY(-7deg); }
 
 .section-tours {
-  padding: 25rem 8rem 50rem;
+  padding: 25rem 8rem 15rem;
   margin-top: -18vh; }
