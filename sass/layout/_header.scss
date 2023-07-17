@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
 
   &__logo-box {

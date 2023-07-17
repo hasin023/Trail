@@ -288,18 +288,17 @@ body {
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    color: #fff;
-    font-size: 4rem;
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
-    border-radius: 4px;
+    border-radius: 0.5rem;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
@@ -315,6 +314,50 @@ body {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__img {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: soft-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__img--1 {
+      background-image: linear-gradient(to right bottom, #5ad869, #28b485), url(../img/about-1.jpg); }
+    .card__img--2 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/about-2.jpg); }
+    .card__img--3 {
+      background-image: linear-gradient(to right bottom, #50b2bb, #5643fa), url(../img/about-3.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: 14rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(90, 216, 105, 0.75), rgba(40, 180, 133, 0.75)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.75), rgba(255, 119, 48, 0.75)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(80, 178, 187, 0.75), rgba(86, 67, 250, 0.75)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 .header {
   height: 110vh;
@@ -322,6 +365,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh); }
   .header__logo-box {
     position: absolute;
