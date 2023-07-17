@@ -1,7 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   line-height: 1.7;
   color: $body-text-color;
 }
@@ -47,5 +47,19 @@ body {
   &:hover {
     color: #fff;
     box-shadow: inset 100rem 0 0 0 $color-primary-secondary;
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

@@ -56,3 +56,45 @@
     }
   }
 }
+
+.link-button {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  max-width: 13rem;
+  position: relative;
+  padding: 1rem;
+  box-shadow: inset 0 0 0 0.2rem $color-primary-link;
+  background-color: $color-grey-light;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary-link;
+    transform-origin: 0 bottom 0;
+    transform: scaleY(0);
+    transition: 0.2s ease-out;
+  }
+
+  &:hover {
+    .link-text {
+      color: $color-white;
+    }
+    &:before {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.link-text {
+  position: relative;
+  font-size: $default-font-size;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: 0.2s ease-out;
+}
