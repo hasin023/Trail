@@ -582,6 +582,68 @@ input[type="radio"]:focus {
   outline: 0.2rem solid currentColor;
   outline-offset: 0.2rem; }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  background-color: #fff;
+  z-index: 2000; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#50b2bb, #5ad869);
+  z-index: 1000;
+  transform: scale(80); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 100%;
+  transition: all 0.8s; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  transition: all 0.4s ease; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #50b2bb;
+  transform: translateX(1rem); }
+
 .header {
   height: 110vh;
   background-image: linear-gradient(to left top, rgba(80, 178, 187, 0.8), rgba(90, 216, 105, 0.8)), url(../img/hero.jpg);
@@ -645,7 +707,7 @@ input[type="radio"]:focus {
 
 .footer {
   background-color: #333;
-  padding: 10rem 0;
+  padding: 6rem 0;
   font-size: 1.4rem; }
   .footer__logo-box {
     text-align: center;
