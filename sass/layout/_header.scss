@@ -12,6 +12,18 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
 
+  @include respond(phone) {
+    height: 90vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83vh);
+  }
+
+  @include respond(small-phone) {
+    height: 80vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73vh);
+  }
+
   &__logo-box {
     position: absolute;
     top: 3.2rem;

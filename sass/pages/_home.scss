@@ -1,6 +1,14 @@
 .section-about {
   padding: 25rem 8rem;
   margin-top: -28vh;
+
+  @include respond(phone) {
+    margin-top: -14vh;
+  }
+
+  @include respond(small-phone) {
+    margin-top: -14vh;
+  }
 }
 
 .section-features {
@@ -24,6 +32,14 @@
 .section-tours {
   padding: 25rem 8rem 15rem;
   margin-top: -18vh;
+
+  @include respond(phone) {
+    margin-top: -10vh;
+  }
+
+  @include respond(small-phone) {
+    margin-top: -10vh;
+  }
 }
 
 .section-stories {
