@@ -9,8 +9,14 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
+
+  @include respond(tab-land) {
+    height: 105vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93vh);
+  }
 
   @include respond(phone) {
     height: 90vh;
@@ -19,7 +25,7 @@
   }
 
   @include respond(small-phone) {
-    height: 80vh;
+    height: 78vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73vh);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73vh);
   }

@@ -1,13 +1,13 @@
 .section-about {
   padding: 25rem 8rem;
-  margin-top: -28vh;
+  margin-top: -15vh;
 
   @include respond(phone) {
-    margin-top: -14vh;
+    margin-top: -12vh;
   }
 
   @include respond(small-phone) {
-    margin-top: -14vh;
+    margin-top: -12vh;
   }
 }
 
@@ -31,14 +31,14 @@
 
 .section-tours {
   padding: 25rem 8rem 15rem;
-  margin-top: -18vh;
+  margin-top: -10vh;
 
   @include respond(phone) {
-    margin-top: -10vh;
+    margin-top: -8vh;
   }
 
   @include respond(small-phone) {
-    margin-top: -10vh;
+    margin-top: -8vh;
   }
 }
 
