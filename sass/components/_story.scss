@@ -8,7 +8,16 @@
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
-  //   margin-bottom: 6rem;
+
+  @include respond(tab-port) {
+    width: 110%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   & > * {
     transform: skewX(12deg);
@@ -26,6 +35,10 @@
     transform: translateX(-3rem) skewX(12deg);
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -37,6 +50,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
