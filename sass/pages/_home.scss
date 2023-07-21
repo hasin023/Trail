@@ -84,10 +84,37 @@
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
-  height: 50rem;
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        $color-white 65%,
+        transparent 65%
+      ),
+      url(../img/cta.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.8) 0%,
+        $color-white 100%
+      ),
+      url(../img/cta.jpg);
+    background-size: cover;
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }

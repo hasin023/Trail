@@ -611,6 +611,9 @@ body {
   width: 90%;
   display: block;
   transition: all 0.3s ease; }
+  @media only screen and (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input::-webkit-input-placeholder {
     color: #999; }
   .form__input:focus {
@@ -636,6 +639,10 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media only screen and (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-label {
   margin-left: 1rem; }
@@ -991,8 +998,21 @@ input[type="radio"]:focus {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, #fff 50%, transparent 50%), url(../img/cta.jpg);
   background-size: cover;
   border-radius: 0.5rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, #fff 65%, transparent 65%), url(../img/cta.jpg);
+      background-size: cover; } }
+  @media only screen and (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, #fff 100%), url(../img/cta.jpg);
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media only screen and (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media only screen and (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
