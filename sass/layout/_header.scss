@@ -9,8 +9,22 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
+
+  @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95vh);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.8),
+        rgba($color-secondary, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(tab-land) {
     height: 105vh;
